@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container header">
         <div className="row">
           <div className="col-12 col-md-6 logo">
-            <Link to="/">Nombre del Equipo</Link>
+            <Link to="/">Landing Page</Link>
           </div>
           <div className="col-12 col-md-6 custom-nav">
             <nav>
