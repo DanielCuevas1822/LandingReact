@@ -1,34 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Person from "../PersonComponent/Person";
+import StaticContext from "../../context/StaticContext";
 const PeronsList = () => {
+  const context = useContext(StaticContext);
   return (
     <div id="somos" className="container list">
       <div className="row">
         <p className="list__title">Quiénes somos</p>
-        <Person
-          name="Marie Mortensen"
-          desc=""
-          image="https://randomuser.me/api/portraits/women/27.jpg"
-          id="1"
-        />
-        <Person
-          name="Natalia Soto"
-          desc=""
-          image="https://randomuser.me/api/portraits/women/12.jpg"
-          id="2"
-        />
-        <Person
-          name="Thomas Meyer"
-          desc=""
-          image="https://randomuser.me/api/portraits/men/65.jpg"
-          id="3"
-        />
-        <Person
-          name="Hunter Walker"
-          desc=""
-          image="https://randomuser.me/api/portraits/men/1.jpg"
-          id="4"
-        />
+        {context.map((item, index) => (
+          <Person
+            key={index}
+            name={item.name}
+            desc=""
+            image={item.image}
+            id={item.id}
+          />
+        ))}
       </div>
     </div>
   );
