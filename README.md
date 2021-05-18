@@ -1,6 +1,6 @@
 # LandingReact
 
-_It is a simple responsive page made in React to practice some concepts._
+_It is a simple responsive landing page made in React to practice some concepts._
 
 _Concepts learned in this proyect:_
 
