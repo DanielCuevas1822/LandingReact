@@ -1,0 +1,87 @@
+.contact {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    color: $verde-oscuro;
+    text-transform: uppercase;
+    font-family: $font-rubik;
+    font-size: rem(24);
+    padding-top: rem(45);
+  }
+  &__description {
+    font-family: $font-opensans;
+    font-weight: 400;
+
+    @include mobil() {
+      max-width: rem(300);
+    }
+    @include tablet() {
+      max-width: rem(500);
+    }
+  }
+  &__info {
+    font-family: $font-opensans;
+    font-weight: 400;
+    font-size: rem(12);
+    color: gris-oscuro;
+    span {
+      color: $verde-claro;
+    }
+    @include mobil() {
+      max-width: rem(200);
+    }
+    @include tablet() {
+      max-width: rem(500);
+    }
+  }
+  &__button {
+    @include mobil() {
+      text-align: center;
+    }
+    @include tablet() {
+      text-align: right;
+    }
+  }
+  form {
+    input,
+    textarea,
+    button {
+      margin-bottom: rem(15);
+    }
+    label {
+      font-family: $font-opensans;
+      font-weight: 400;
+      font-size: rem(14);
+      color: $gris-oscuro;
+    }
+    button {
+      background-color: $verde-claro;
+      font-family: $font-opensans;
+      font-size: rem(16);
+      font-weight: 600;
+      border: unset;
+      @include mobil() {
+        min-width: 100%;
+      }
+      @include tablet() {
+        min-width: rem(200);
+      }
+      text-transform: uppercase;
+    }
+    button:hover {
+      background-color: $verde-oscuro;
+    }
+    .notification {
+      font-family: $font-opensans;
+      font-weight: 400;
+      color: $verde-oscuro;
+    }
+    .warning {
+      color: red;
+    }
+  }
+}

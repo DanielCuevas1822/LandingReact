@@ -1,0 +1,39 @@
+.foda {
+  background-color: $gris-claro;
+  position: relative;
+  &__text {
+    @include mobil() {
+      padding: rem(30) 0;
+    }
+    @include tablet() {
+      padding: rem(45) rem(22.5) rem(60) rem(22.5);
+    }
+    text-align: center;
+  }
+  &__title {
+    color: $verde-oscuro;
+    font-family: $font-rubik;
+    font-size: rem(22);
+    margin-bottom: rem(15);
+  }
+  &__description {
+    color: $gris-oscuro;
+    font-family: $font-opensans;
+    font-weight: 400;
+    font-size: rem(16);
+    margin: 0;
+  }
+  .triangulo {
+    width: 0;
+    height: 0;
+    border-left: rem(25) solid $blanco;
+    border-top: rem(25) solid transparent;
+    border-bottom: rem(25) solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(90deg);
+  }
+}

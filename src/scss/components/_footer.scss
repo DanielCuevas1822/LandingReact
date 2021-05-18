@@ -1,0 +1,39 @@
+.footer {
+  border-top: 1px solid $gris-claro;
+  padding-top: rem(25);
+  padding-bottom: rem(60);
+  p {
+    font-family: $font-opensans;
+    font-weight: 400;
+    font-size: rem(14);
+    color: $gris-claro;
+  }
+  &__nav,
+  &__copy {
+    @include mobil() {
+      text-align: center;
+    }
+    @include tablet() {
+      text-align: unset;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      a {
+        color: $gris-oscuro;
+        text-decoration: none;
+      }
+      text-transform: uppercase;
+      font-family: $font-opensans;
+      font-weight: 600;
+      font-size: rem(14);
+      margin-bottom: rem(10);
+      list-style: none;
+
+      @include tablet() {
+        text-align: right;
+      }
+    }
+  }
+}

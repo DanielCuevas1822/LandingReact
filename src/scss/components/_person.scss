@@ -1,0 +1,85 @@
+.list {
+  &__title {
+    color: $verde-oscuro;
+    text-transform: uppercase;
+    font-family: $font-rubik;
+    font-size: rem(24);
+    padding: rem(45) 0;
+    text-align: center;
+  }
+  .container {
+    a {
+      text-decoration: none;
+    }
+  }
+  .container:nth-child(odd) {
+    .person {
+      flex-direction: row-reverse;
+      .person__details {
+        display: flex;
+        flex-direction: column;
+        @include mobil() {
+          align-items: center;
+        }
+        @include tablet() {
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.person {
+  @include mobil() {
+    padding-bottom: rem(45);
+  }
+  @include tablet() {
+    padding-bottom: rem(60);
+  }
+  .person__img {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    height: rem(278);
+    width: rem(278);
+    @include mobil() {
+      margin-bottom: rem(15);
+    }
+    @include tablet() {
+      margin-bottom: 0;
+    }
+  }
+  p {
+    font-family: $font-opensans;
+    font-weight: 400;
+    margin-bottom: rem(15);
+    @include mobil() {
+      text-align: center;
+    }
+    @include tablet() {
+      text-align: unset;
+    }
+  }
+  &__name {
+    font-size: rem(20);
+    color: $negro;
+  }
+  &__description {
+    font-size: rem(16);
+    color: $gris-oscuro;
+    max-width: rem(439);
+  }
+  .social {
+    @include mobil() {
+      text-align: center;
+    }
+    @include tablet() {
+      text-align: unset;
+    }
+    svg {
+      color: $verde-oscuro;
+      margin: 0 rem(13) 0 0;
+    }
+  }
+}

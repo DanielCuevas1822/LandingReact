@@ -1,0 +1,39 @@
+.banner {
+  background-image: url("https://legismusic.com/wp-content/uploads/2016/06/musica-de-fondo-sin-copyright.jpg");
+  background-size: cover;
+  background-position: center;
+  @include mobil() {
+    min-height: rem(421);
+  }
+  @include tablet() {
+    min-height: rem(550);
+  }
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  &__text {
+    padding: rem(15) rem(30);
+    @include mobil() {
+      background-color: rgb(223, 223, 230);
+      width: 100%;
+      position: relative;
+      bottom: -40px;
+    }
+    @include tablet() {
+      width: rem(441);
+      background-color: rgba(223, 223, 230, 0.5);
+      position: static;
+    }
+    p {
+      font-family: $font-opensans;
+      font-weight: 600;
+      margin: 0;
+      @include mobil() {
+        font-size: rem(18);
+      }
+      @include tablet() {
+        font-size: rem(24);
+      }
+    }
+  }
+}
